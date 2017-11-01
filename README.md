@@ -61,10 +61,6 @@ git push origin master
 ```
 
 ### Proximo
-git branch -d branch_name
-git branch -D branch_name
-The -d option is an alias for --delete, which only deletes the branch if it has already been fully merged in its upstream branch. You could also use -D, which is an alias for --delete --force, which deletes the branch "irrespective of its merged status."
-git push <remote_name> --delete <branch_name>
 
 git reset [file]
 Unstages the file, but preserve its contents
@@ -76,3 +72,20 @@ Shows file differences not yet staged
 
 git diff --staged
 Shows file differences between staging and the last file version
+
+#### HTTPS
+
+git config --global user.name "NOMBRE"
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+git config --global user.email "email@example.com"
+
+#### SSH
+
+#### BRANCH
+
+##### delete
+git branch -d branch_name
+git branch -D branch_name
+The -d option is an alias for --delete, which only deletes the branch if it has already been fully merged in its upstream branch. You could also use -D, which is an alias for --delete --force, which deletes the branch "irrespective of its merged status."
+git push <remote_name> --delete <branch_name>
